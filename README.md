@@ -1,4 +1,1 @@
-# PetProgect
-# JPetStoreTest
-# JPetStoreTest
 # JPetStoreTest
