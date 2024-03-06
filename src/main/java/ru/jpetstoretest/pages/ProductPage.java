@@ -14,6 +14,7 @@ public class ProductPage {
     public ProductPage clickAddCartButton(){
         addItemToCartIdButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

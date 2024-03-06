@@ -10,14 +10,15 @@ import static com.codeborne.selenide.Selenide.$x;
 public class ShoppingCartPage {
 
 
-    private final SelenideElement proceedCheckoutButton =$x(" //a[contains(@href,'newOrderForm')]");
-    private final SelenideElement changingNumberProductsField =$x("//input[contains(@name,'EST-6')]");
+    private final SelenideElement proceedCheckoutButton = $x(" //a[contains(@href,'newOrderForm')]");
+    private final SelenideElement changingNumberProductsField = $x("//input[contains(@name,'EST-6')]");
     private final SelenideElement updateCartButton = $x("//input[@name='updateCartQuantities']");
 
     @Step("Кликаем на кнопку 'Update Cart'")
     public ShoppingCartPage clickUpdateCartButton(){
         updateCartButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -26,6 +27,7 @@ public class ShoppingCartPage {
     public ShoppingCartPage sendKeysChangingNumberProductsField(String number){
         changingNumberProductsField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .press(Keys.CONTROL, Keys.SHIFT, Keys.ARROW_UP)
                 .press(Keys.DELETE)
                 .sendKeys(number);
@@ -36,6 +38,7 @@ public class ShoppingCartPage {
     public ShoppingCartPage clickCheckoutButton(){
         proceedCheckoutButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

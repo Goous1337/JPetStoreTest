@@ -12,7 +12,7 @@ import ru.jpetstoretest.model.FavouriteType;
 import ru.jpetstoretest.model.LanguageType;
 import ru.jpetstoretest.pages.*;
 
-@Feature("UI")
+@Feature("Фронт")
 public class BaseUiTest {
 
     private final String authorizationPageUrl  = "https://petstore.octoperf.com/actions/Catalog.action";

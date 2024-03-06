@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class ProductListPage {
 
-    private final SelenideElement EST6BulldogButton =$x("//a[contains(@href,'itemId=EST-6')]");
+    private final SelenideElement EST6BulldogButton = $x("//a[contains(@href,'itemId=EST-6')]");
     private final SelenideElement EST8PoodleButton = $x("//a[contains(@href,'itemId=EST-8')]");
 
     @Step("Кликнуть на кнопку 'EST-6' ")

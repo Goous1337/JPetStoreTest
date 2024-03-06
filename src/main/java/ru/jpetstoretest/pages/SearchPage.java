@@ -8,14 +8,15 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class SearchPage {
 
-    private final SelenideElement successfullyFoundOrder =$x("//div[@id='Catalog']//td[contains(text(),'Bulldog')]");
-    private final SelenideElement searchProductButton =$x("//input[@name='searchProducts']");
-    private final SelenideElement keyWordInputField =$x("//input[@name='keyword']");
+    private final SelenideElement successfullyFoundOrder = $x("//div[@id='Catalog']//td[contains(text(),'Bulldog')]");
+    private final SelenideElement searchProductButton = $x("//input[@name='searchProducts']");
+    private final SelenideElement keyWordInputField = $x("//input[@name='keyword']");
 
     @Step("Продукт должен существовать")
     public SearchPage successfullyFoundProductExist(){
         successfullyFoundOrder
-                .shouldBe(Condition.exist);
+                .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear);
         return this;
     }
 
@@ -23,8 +24,8 @@ public class SearchPage {
     public SearchPage sendKeysKeyWordInputField(String nameProduct){
         keyWordInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(nameProduct);
-
         return this;
     }
 
@@ -32,6 +33,7 @@ public class SearchPage {
     public SearchPage clickSearchButton(){
         searchProductButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

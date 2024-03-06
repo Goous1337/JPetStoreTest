@@ -14,7 +14,8 @@ public class CardRegistrationPage {
     private final SelenideElement cardNumberInputField = $x("//input[@name='order.creditCard']");
     private final SelenideElement continueButton = $x("//input[@value='Continue']");
     private final SelenideElement saveAccountInformationSubmitButton = $x("//a[contains(@href,'newOrder')]");
-    private final SelenideElement successfullyCreatedOrderContainer = $x("//div[@id='Content']//li[contains(text(),'Thank you, your order has been submitted.')]");
+    private final SelenideElement successfullyCreatedOrderContainer = $x("//div[@id='Content']"
+            + "//li[contains(text(),'Thank you, your order has been submitted.')]");
     private final SelenideElement quantityValueText = $x("//th[contains(text(),'Quantity')]/../..//td[3]");
 
     private SelenideElement cardTypeValueButton(String value) {
@@ -29,10 +30,11 @@ public class CardRegistrationPage {
                 .getText();
     }
 
-    @Step("Кликнуть на кнопку 'Card Type' ")
+    @Step("Кликнуть на кнопку 'Card Type'")
     public CardRegistrationPage clickTypeDropdownButton() {
         cardTypeDropdownButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -46,28 +48,31 @@ public class CardRegistrationPage {
         return this;
     }
 
-    @Step("Кликнуть на поле 'Card Number' -> вводим номер карты ")
+    @Step("Кликнуть на поле 'Card Number' -> вводим номер карты")
     public CardRegistrationPage sendKeysCardNumberField(String number) {
         cardNumberInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .press(Keys.CONTROL, Keys.SHIFT, Keys.ARROW_UP)
                 .press(Keys.DELETE)
                 .sendKeys(number);
         return this;
     }
 
-    @Step("Кликнуть на кнопку 'Continue' ")
+    @Step("Кликнуть на кнопку 'Continue'")
     public CardRegistrationPage clickContinueButton() {
         continueButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
 
-    @Step("Кликнуть на кнопку 'Confirm' ")
+    @Step("Кликнуть на кнопку 'Confirm'")
     public CardRegistrationPage clickAccountInformationButton() {
         saveAccountInformationSubmitButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -75,7 +80,8 @@ public class CardRegistrationPage {
     @Step("Заказ создан")
     public CardRegistrationPage orderSuccessfullyCreatedTextShouldExist() {
         successfullyCreatedOrderContainer
-                .shouldBe(Condition.exist);
+                .shouldBe(Condition.exist).
+                shouldBe(Condition.appear);
         return this;
     }
 }

@@ -167,7 +167,6 @@ public class Client {
         public Builder witZip(String zip){
             this.zip = zip;
             return this;
-
         }
 
         public Builder withCountry(String country){
@@ -187,9 +186,8 @@ public class Client {
 
         public Client build(){
             return new Client(userID, password, firstName, lastName, email,
-                    phoneNumber, addressFirst, addressSecond, city ,state, zip, country, languageType, favouriteType);
+                    phoneNumber, addressFirst, addressSecond, city ,state,
+                    zip, country, languageType, favouriteType);
         }
-
     }
-
 }

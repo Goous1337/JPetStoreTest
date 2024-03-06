@@ -13,12 +13,13 @@ public class LoginPage {
     private final SelenideElement passwordInputField = $x("//input[@name='password']");
     private final SelenideElement loginButton = $x("//input[@name='signon']");
     private final SelenideElement singInButton = $x("//a[contains(@href,'signonForm')]");
-    private final SelenideElement registerNowButton =$x("//a[contains(@href,'newAccountForm')]");
+    private final SelenideElement registerNowButton = $x("//a[contains(@href,'newAccountForm')]");
 
     @Step("Кликнуть на кнопку 'Sing in' ")
     public LoginPage clickSignInButton() {
         singInButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
 
@@ -28,6 +29,7 @@ public class LoginPage {
     public LoginPage sendKeysUserIDInputField(String username) {
         usernameInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(username);
         return this;
     }
@@ -36,6 +38,7 @@ public class LoginPage {
     public LoginPage sendKeysPasswordInputField(String password) {
         passwordInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .press(Keys.CONTROL, Keys.SHIFT, Keys.ARROW_UP)
                 .press(Keys.DELETE)
                 .sendKeys(password);
@@ -46,6 +49,7 @@ public class LoginPage {
     public LoginPage clickLoginButton() {
         loginButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -54,6 +58,7 @@ public class LoginPage {
     public LoginPage clickRegisterNowButton() {
         registerNowButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

@@ -56,6 +56,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage sendKeysUserIDInputField(String ID){
         userIDInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(ID);
         return this;
     }
@@ -64,6 +65,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage sendKeysNewPasswordInputField(String password){
         newPasswordInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(password);
         return this;
     }
@@ -72,6 +74,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysRepeatPasswordInputField(String password){
         repeatPasswordInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(password);
         return this;
     }
@@ -80,6 +83,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage sendKeysFirstNameInputField(String firsName){
         firstNameInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(firsName);
         return this;
     }
@@ -88,6 +92,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysLastNameInputField(String lastName){
         lastNameInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(lastName);
         return this;
     }
@@ -96,6 +101,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysEmailInputField(String email){
         emailInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(email);
         return this;
     }
@@ -104,6 +110,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysPhoneNumberInputField(String phone) {
         phoneNumberInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(phone);
         return this;
     }
@@ -112,6 +119,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysAddressFirstInputField(String address) {
         firstAddressInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(address);
         return this;
     }
@@ -120,6 +128,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysAddressSecondInputField(String address) {
         addressSecondInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(address);
         return this;
     }
@@ -128,6 +137,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysCityInputField(String city) {
         cityInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(city);
         return this;
     }
@@ -136,6 +146,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysStateInputField(String state) {
         stateInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(state);
         return this;
     }
@@ -144,6 +155,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysZipInputFiled(String zip) {
         zipCodeInputFiled
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(zip);
         return this;
     }
@@ -152,6 +164,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage senKeysCountryInputField(String country) {
         countryInputField
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .sendKeys(country);
         return this;
     }
@@ -160,6 +173,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage clickLanguagePreferenceButton(){
         languagePreferenceButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -168,6 +182,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage clickFavouriteCategoryButton(){
         favouriteCategoryButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -176,6 +191,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage  clickEnableMyBannerCheckBox(){
         enableMyBannerCheckBox
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -184,6 +200,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage clickEnableMyListButton(){
         enableMyListCheckBox
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -192,6 +209,7 @@ public class RegistrationAccountPage {
     public RegistrationAccountPage clickSaveAccountInformationButton(){
         saveAccountInformationButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

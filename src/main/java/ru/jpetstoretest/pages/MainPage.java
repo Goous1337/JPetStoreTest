@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class MainPage {
 
-    private final SelenideElement categoryDogsButton =$x("//a[contains(@href,'DOGS')]");
+    private final SelenideElement categoryDogsButton = $x("//a[contains(@href,'DOGS')]");
     private final SelenideElement categoryFishButton = $x("//a[contains(@href,'FISH')]");
-    private final SelenideElement myAccountButton =$x("//a[contains(@href,'editAccountForm')]");
+    private final SelenideElement myAccountButton = $x("//a[contains(@href,'editAccountForm')]");
     private final SelenideElement singInButton = $x("//a[contains(@href,'signonForm')]");
 
     @Step("Кликнуть на кнопку входа")
@@ -26,6 +26,7 @@ public class MainPage {
     public MainPage clickCategoryDogsButton(){
         categoryDogsButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -34,6 +35,7 @@ public class MainPage {
     public MainPage clickCategoryFishButton() {
         categoryFishButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

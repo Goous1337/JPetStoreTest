@@ -14,6 +14,7 @@ public class FishCategoryPage {
     public FishCategoryPage clickAngelFishButton(){
         productIDAngelFish
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

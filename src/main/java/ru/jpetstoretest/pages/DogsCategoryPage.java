@@ -15,6 +15,7 @@ public class DogsCategoryPage {
     public DogsCategoryPage clickPoodleButton(){
         poodleButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }
@@ -23,6 +24,7 @@ public class DogsCategoryPage {
     public DogsCategoryPage clickBulldogIdButton(){
         bulldogIdButton
                 .shouldBe(Condition.exist)
+                .shouldBe(Condition.appear)
                 .click();
         return this;
     }

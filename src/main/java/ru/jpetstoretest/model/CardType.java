@@ -6,7 +6,6 @@ public enum CardType {
     MASTER_CARD("Master Card"),
     AMERICAN_EXPRESS("American Express");
 
-
     private final String value;
 
     CardType(String value) {
