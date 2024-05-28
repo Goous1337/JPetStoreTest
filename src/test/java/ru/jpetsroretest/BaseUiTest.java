@@ -15,7 +15,6 @@ import ru.jpetstoretest.pages.*;
 @Feature("Фронт")
 public class BaseUiTest {
 
-    private final String authorizationPageUrl  = "https://petstore.octoperf.com/actions/Catalog.action";
     protected RandomHelper randomHelper = new RandomHelper();
     public BaseRouter baseRouter  = new BaseRouter();
 
@@ -24,6 +23,7 @@ public class BaseUiTest {
     public void setupSelenideConfiguration(){
         Configuration.timeout = 10000;
         Configuration.browserSize = "1920x1080";
+        String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
     }
 

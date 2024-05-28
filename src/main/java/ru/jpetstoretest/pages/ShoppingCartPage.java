@@ -28,10 +28,10 @@ public class ShoppingCartPage {
         changingNumberProductsField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
-                .press(Keys.CONTROL, Keys.SHIFT, Keys.ARROW_UP)
+                .press(Keys.COMMAND,"A")
                 .press(Keys.DELETE)
                 .sendKeys(number);
-        return this;
+        return this; 
     }
 
     @Step("Кликнуть на кнопку 'Proceed to Checkout' ")
