@@ -22,7 +22,7 @@ public class BaseUiTest {
     @BeforeEach
     public void setupSelenideConfiguration(){
         Configuration.timeout = 10000;
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = "2560×1600";
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
     }
