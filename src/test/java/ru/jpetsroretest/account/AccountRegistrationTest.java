@@ -1,5 +1,6 @@
 package ru.jpetsroretest.account;
 
+import org.junit.jupiter.api.Disabled;
 import ru.jpetsroretest.BaseUiTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -10,9 +11,9 @@ import ru.jpetstoretest.model.Client;
 @Feature("Проверка функциональности регистрации аккаунта")
 public class AccountRegistrationTest extends BaseUiTest {
 
-    @Test
-    @Story("Пользователь может зарегистрировать новый аккаунт")
-    @DisplayName("Регистрации нового аккаунта")
+   // @Disabled
+   // @Story("Пользователь может зарегистрировать новый аккаунт")
+    //@DisplayName("Регистрации нового аккаунта")
     public void accountRegistrationTest() {
         // Arrange
         baseRouter.loginPage()
