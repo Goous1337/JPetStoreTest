@@ -7,7 +7,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@Feature("Проверка функциональности поиска")
+//@Feature("Проверка функциональности поиска")
 public class SearchProductTest extends BaseUiTest {
 
     @Disabled
