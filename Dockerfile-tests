@@ -1,0 +1,15 @@
+# Используем официальный образ Maven с Java 17
+FROM maven:3.8-openjdk-17
+
+# Устанавливаем рабочую директорию
+WORKDIR /tests
+
+# Копируем pom.xml и исходники тестов
+COPY pom.xml .
+COPY src ./src
+
+# Скачиваем зависимости (кэшируем этот слой)
+RUN mvn dependency:go-offline -B
+
+# Запускаем тесты
+CMD ["mvn", "test"]

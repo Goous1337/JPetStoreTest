@@ -1,0 +1,63 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+  java-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile-tests
+    depends_on:
+      web:
+        condition: service_healthy
+    volumes:
+      - ./target:/tests/target	version: '3.8'
+
+services:
+  # Flask-сервис
+  web:
+    build: .  # Собираем из Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+    # Healthcheck для проверки готовности сервиса
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # Redis
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+  # Контейнер с Java-тестами
+  java-tests:
+    build:
+      context: .  # Директория проекта
+      dockerfile: Dockerfile-tests
+    depends_on:
+      web:
+        condition: service_healthy  # Ждем, пока web-сервис станет доступен
+    volumes:
+      - ./target:/tests/target  # Для сохранения отчетов
