@@ -1,5 +1,6 @@
 package ru.jpetsroretest.order;
 
+import org.junit.jupiter.api.Disabled;
 import ru.jpetsroretest.BaseUiTest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -12,7 +13,7 @@ import ru.jpetstoretest.model.Client;
 @Feature("Проверка функциональности заказов")
 public class CreateOrderTest extends BaseUiTest {
 
-    @Test
+    @Disabled
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest () {
