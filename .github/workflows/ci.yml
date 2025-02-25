@@ -3,35 +3,51 @@ name: Java CI Pipeline
 on:
   push:
     branches:
-      - '*'  # Запускать pipeline при пуше в ветку main
+      - '*'
   pull_request:
     branches:
-      - main  # Запускать pipeline при создании pull request в ветку main
+      - main
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest  # Используем последнюю версию Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Клонируем репозиторий
+        uses: actions/checkout@v3
 
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'  # Указываем версию Java (11, 17 и т.д.)
-          distribution: 'temurin'  # Используем Temurin (Adoptium)
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Install ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
+          CHROME_MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d'.' -f1)
+          wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION -O chromedriver_version.txt
+          CHROMEDRIVER_VERSION=$(cat chromedriver_version.txt)
+          wget https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
 
       - name: Cache Maven packages
         uses: actions/cache@v3
         with:
-          path: ~/.m2/repository  # Кэшируем зависимости Maven
+          path: ~/.m2/repository
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             maven-${{ runner.os }}-
 
       - name: Build with Maven
-        run: mvn clean package  # Собираем проект и запускаем тесты
+        run: mvn clean package
 
       - name: Run tests
-        run: mvn test  # Запуск автотестов
+        run: mvn test
