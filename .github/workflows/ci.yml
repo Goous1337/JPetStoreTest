@@ -3,7 +3,7 @@ name: Java CI Pipeline
 on:
   push:
     branches:
-      - main  # Запускать pipeline при пуше в ветку main
+      - '*'  # Запускать pipeline при пуше в ветку main
   pull_request:
     branches:
       - main  # Запускать pipeline при создании pull request в ветку main
