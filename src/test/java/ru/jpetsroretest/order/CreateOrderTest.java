@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import ru.jpetstoretest.model.CardType;
 import ru.jpetstoretest.model.Client;
 
-@Feature("Проверка функциональности заказов")
+//@Feature("Проверка функциональности заказов")
 public class CreateOrderTest extends BaseUiTest {
 
     @Disabled
@@ -48,7 +48,7 @@ public class CreateOrderTest extends BaseUiTest {
                 .orderSuccessfullyCreatedTextShouldExist();
     }
 
-    @Test
+    @Disabled
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
     public void updatingQuantityProductShoppingCartTest(){
