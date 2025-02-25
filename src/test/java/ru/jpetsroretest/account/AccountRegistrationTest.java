@@ -28,6 +28,7 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .sendKeysPasswordInputField(client.getPassword())
                 .clickLoginButton();
         baseRouter.mainPage()
-                .myAccountButtonShouldExist();
+                .myAccountButtonShouldExist()
+                .clickCategoryFishButton();
     }
 }
