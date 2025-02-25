@@ -29,6 +29,6 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .clickLoginButton();
         baseRouter.mainPage()
                 .myAccountButtonShouldExist()
-                .clickCategoryFishButton();
+                .clickCategoryDogsButton();
     }
 }
