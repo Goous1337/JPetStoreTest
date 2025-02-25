@@ -17,14 +17,14 @@ import ru.jpetstoretest.pages.*;
 
 import java.util.UUID;
 
-@Feature("Фронт")
+//@Feature("Фронт")
 public class BaseUiTest {
 
     protected RandomHelper randomHelper = new RandomHelper();
     public BaseRouter baseRouter  = new BaseRouter();
 
     @Step("Открытие главной страницы")
-    @BeforeEach
+   // @BeforeEach
     public void setupSelenideConfiguration(){
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
@@ -34,7 +34,7 @@ public class BaseUiTest {
     }
 
     @Step("Закрытие браузера")
-    @AfterEach
+   // @AfterEach
     public void closeBrowser(){
        Selenide.closeWebDriver();
     }
