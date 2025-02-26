@@ -15,18 +15,19 @@ import ru.jpetstoretest.model.FavouriteType;
 import ru.jpetstoretest.model.LanguageType;
 import ru.jpetstoretest.pages.*;
 
-import java.util.UUID;
 
-//@Feature("Фронт")
+@Feature("Фронт")
 public class BaseUiTest {
 
     protected RandomHelper randomHelper = new RandomHelper();
     public BaseRouter baseRouter  = new BaseRouter();
 
     @Step("Открытие главной страницы")
-   // @BeforeEach
+   @BeforeEach
     public void setupSelenideConfiguration(){
         Configuration.browser = "chrome";
+        Configuration.headless = true;
+        Configuration.screenshots = true;
         Configuration.timeout = 10000;
         Configuration.browserSize = "2560×1600";
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
@@ -34,7 +35,7 @@ public class BaseUiTest {
     }
 
     @Step("Закрытие браузера")
-   // @AfterEach
+   @AfterEach
     public void closeBrowser(){
        Selenide.closeWebDriver();
     }
