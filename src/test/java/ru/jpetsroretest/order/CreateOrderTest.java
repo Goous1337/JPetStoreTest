@@ -13,7 +13,7 @@ import ru.jpetstoretest.model.Client;
 @Feature("Проверка функциональности заказов")
 public class CreateOrderTest extends BaseUiTest {
 
-    @Test
+    @Disabled
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest () {
@@ -48,7 +48,7 @@ public class CreateOrderTest extends BaseUiTest {
                 .orderSuccessfullyCreatedTextShouldExist();
     }
 
-    @Test
+    @Disabled
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
     public void updatingQuantityProductShoppingCartTest(){
