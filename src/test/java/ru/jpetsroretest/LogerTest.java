@@ -9,7 +9,15 @@ public class LogerTest {
     private static final Logger logger = LoggerFactory.getLogger(LogerTest.class);
 
     @Test
-    public void testLogging() {
-        logger.info("Ci cd!");
+    public void testLoggerInfo() {
+        logger.info("Сообщение уровня info!");
+    }
+    @Test
+    public void testLoggerDebug() {
+        logger.debug("Сообщение уровня debug!");
+    }
+    @Test
+    public void testLoggerError() {
+        logger.error("Сообщение уровня Error");
     }
 }
