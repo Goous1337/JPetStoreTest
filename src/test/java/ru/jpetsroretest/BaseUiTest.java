@@ -25,11 +25,9 @@ public class BaseUiTest {
     @Step("Открытие главной страницы")
    @BeforeEach
     public void setupSelenideConfiguration(){
+        Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
-        Configuration.headless = true;
-        Configuration.screenshots = true;
         Configuration.timeout = 10000;
-        Configuration.browserSize = "2560×1600";
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
     }
