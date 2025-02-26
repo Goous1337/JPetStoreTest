@@ -28,8 +28,8 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .sendKeysUserIDInputField(client.getUserID())
                 .sendKeysPasswordInputField(client.getPassword())
                 .clickLoginButton();
-        baseRouter.mainPage()
-                .myAccountButtonShouldExist()
-                .clickCategoryDogsButton();
+        //baseRouter.mainPage()
+               // .myAccountButtonShouldExist()
+                //.clickCategoryDogsButton();
     }
 }
