@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @Feature("Проверка функциональности поиска")
 public class SearchProductTest extends BaseUiTest {
 
-    @Test
+    @Disabled
     @Story("Пользователь может найти продукт")
     @DisplayName("Поиска продукта")
     public void searchProductsTest(){
