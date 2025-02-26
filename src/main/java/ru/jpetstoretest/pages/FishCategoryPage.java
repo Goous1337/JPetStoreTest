@@ -10,7 +10,7 @@ public class FishCategoryPage {
 
     private final SelenideElement productIDAngelFish = $x("//a[contains(@href,'FI-SW-01')]");
 
-    @Step("Кликнуть на кнопку 'FI-SW-01' ")
+    @Step("Кликнуть на кнопку 'FI-SW-01=' ")
     public FishCategoryPage clickAngelFishButton(){
         productIDAngelFish
                 .shouldBe(Condition.exist)
