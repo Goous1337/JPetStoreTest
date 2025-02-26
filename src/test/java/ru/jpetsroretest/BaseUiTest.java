@@ -6,8 +6,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import ru.jpetstoretest.helper.RandomHelper;
 import ru.jpetstoretest.model.Client;
@@ -34,7 +32,7 @@ public class BaseUiTest {
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
-        //Configuration.headless = true;
+        Configuration.headless = true;
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
         Configuration.browserCapabilities.setCapability("goog:chromeOptions", Map.of(
@@ -45,8 +43,8 @@ public class BaseUiTest {
                         "--disable-gpu",
                         "--remote-debugging-port=9222",
                         "--user-data-dir=/tmp/chrome-profile-" + UUID.randomUUID()
-                )
-        ));
+                ))
+        );
     }
 
     @Step("Закрытие браузера")
