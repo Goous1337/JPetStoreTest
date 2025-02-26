@@ -26,15 +26,15 @@ public class CreateOrderTest extends BaseUiTest {
 
         CardType cardType = CardType.AMERICAN_EXPRESS;
 
-        logger.debug("Переход на страницу логина");
+        logger.info("Переход на страницу логина");
         baseRouter.loginPage()
                 .clickSignInButton()
                 .clickRegisterNowButton();
 
-        logger.debug("Регистрация нового клиента");
+        logger.info("Регистрация нового клиента");
         Client client = registerNewClient();
 
-        logger.debug("Авторизация клиента");
+        logger.info("Авторизация клиента");
         baseRouter.mainPage()
                 .clickSingInButton();
         baseRouter.loginPage()
@@ -42,21 +42,21 @@ public class CreateOrderTest extends BaseUiTest {
                 .sendKeysPasswordInputField(client.getPassword())
                 .clickLoginButton();
 
-        logger.debug("Выбор категории Fish");
+        logger.info("Выбор категории Fish");
         baseRouter.mainPage()
                 .clickCategoryFishButton();
         baseRouter.fishCategoryPage()
                 .clickAngelFishButton();
 
-        logger.debug("Добавление товара в корзину");
+        logger.info("Добавление товара в корзину");
         baseRouter.productPage()
                 .clickAddCartButton();
 
-        logger.debug("Переход к оформлению заказа");
+        logger.info("Переход к оформлению заказа");
         baseRouter.shoppingCartPage()
                 .clickCheckoutButton();
 
-        logger.debug("Заполнение данных карты");
+        logger.info("Заполнение данных карты");
         baseRouter.cardRegistrationPage()
                 .clickTypeDropdownButton()
                 .clickCardTypeValueButton(cardType)
@@ -64,7 +64,7 @@ public class CreateOrderTest extends BaseUiTest {
                 .clickContinueButton()
                 .clickAccountInformationButton();
 
-        logger.debug("Проверка успешного создания заказа");
+        logger.info("Проверка успешного создания заказа");
         baseRouter.cardRegistrationPage()
                 .orderSuccessfullyCreatedTextShouldExist();
 
@@ -80,7 +80,9 @@ public class CreateOrderTest extends BaseUiTest {
         baseRouter.loginPage()
                 .clickSignInButton()
                 .clickRegisterNowButton();
+        logger.debug("");
         Client client = registerNewClient();
+
         baseRouter.loginPage()
                 .clickSignInButton()
                 .sendKeysUserIDInputField(client.getUserID())
