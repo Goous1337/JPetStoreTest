@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class LogerTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(LogerTest.class);
+    public static final Logger logger = LoggerFactory.getLogger(LogerTest.class);
 
     @Disabled
     public void testLoggerInfo() {
