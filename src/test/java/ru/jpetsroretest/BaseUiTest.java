@@ -15,6 +15,10 @@ import ru.jpetstoretest.model.FavouriteType;
 import ru.jpetstoretest.model.LanguageType;
 import ru.jpetstoretest.pages.*;
 
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
 
 @Feature("Фронт")
 public class BaseUiTest {
@@ -28,8 +32,19 @@ public class BaseUiTest {
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
+        Configuration.headless = true;
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
+        Configuration.browserCapabilities.setCapability("goog:chromeOptions", Map.of(
+                "args", List.of(
+                        "--no-sandbox",
+                        "--disable-dev-shm-usage",
+                        "--headless=new",
+                        "--disable-gpu",
+                        "--remote-debugging-port=9222",
+                        "--user-data-dir=/tmp/chrome-profile-" + UUID.randomUUID()
+                )
+        ));
     }
 
     @Step("Закрытие браузера")
