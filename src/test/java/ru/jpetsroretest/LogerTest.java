@@ -10,14 +10,14 @@ public class LogerTest {
 
     @Test
     public void testLoggerInfo() {
-        logger.info("Сообщение уровня info!");
+        logger.info("Сообщение уровня info");
     }
     @Test
     public void testLoggerDebug() {
-        logger.debug("Сообщение уровня debug!");
+        logger.debug("Сообщение уровня debug");
     }
     @Test
     public void testLoggerError() {
-        logger.error("Сообщение уровня Error");
+        logger.error("Сообщение уровня error");
     }
 }
