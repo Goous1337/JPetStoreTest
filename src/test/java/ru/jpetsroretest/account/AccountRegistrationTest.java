@@ -11,9 +11,9 @@ import ru.jpetstoretest.model.Client;
 @Feature("Проверка функциональности регистрации аккаунта")
 public class AccountRegistrationTest extends BaseUiTest {
 
-   // @Disabled
-   // @Story("Пользователь может зарегистрировать новый аккаунт")
-    //@DisplayName("Регистрации нового аккаунта")
+   @Test
+   @Story("Пользователь может зарегистрировать новый аккаунт")
+   @DisplayName("Регистрации нового аккаунта")
     public void accountRegistrationTest() {
         // Arrange
         baseRouter.loginPage()

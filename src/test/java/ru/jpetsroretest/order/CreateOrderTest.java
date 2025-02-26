@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
 import ru.jpetstoretest.model.CardType;
 import ru.jpetstoretest.model.Client;
 
-//@Feature("Проверка функциональности заказов")
+@Feature("Проверка функциональности заказов")
 public class CreateOrderTest extends BaseUiTest {
 
-    @Disabled
+    @Test
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest () {
