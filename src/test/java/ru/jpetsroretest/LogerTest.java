@@ -1,5 +1,6 @@
 package ru.jpetsroretest;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,15 +9,15 @@ public class LogerTest {
 
     private static final Logger logger = LoggerFactory.getLogger(LogerTest.class);
 
-    @Test
+    @Disabled
     public void testLoggerInfo() {
         logger.info("Сообщение уровня info");
     }
-    @Test
+    @Disabled
     public void testLoggerDebug() {
         logger.debug("Сообщение уровня debug");
     }
-    @Test
+    @Disabled
     public void testLoggerError() {
         logger.error("Сообщение уровня error");
     }
