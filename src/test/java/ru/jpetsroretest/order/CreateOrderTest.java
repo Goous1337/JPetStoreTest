@@ -48,7 +48,7 @@ public class CreateOrderTest extends BaseUiTest {
                 .orderSuccessfullyCreatedTextShouldExist();
     }
 
-    @Disabled
+    @Test
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
     public void updatingQuantityProductShoppingCartTest(){
