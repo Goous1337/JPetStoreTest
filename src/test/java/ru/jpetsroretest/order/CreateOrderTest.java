@@ -13,7 +13,7 @@ import ru.jpetstoretest.model.Client;
 @Feature("Проверка функциональности заказов")
 public class CreateOrderTest extends BaseUiTest {
 
-    @Disabled
+    @Test
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest () {
