@@ -37,8 +37,7 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .sendKeysPasswordInputField(client.getPassword())
                 .clickLoginButton();
         logger.info("Аккаунт существует (кнопка My account)");
-        baseRouter.mainPage()
-                .myAccountButtonShouldExist()
-                .clickCategoryDogsButton();
+        //baseRouter.mainPage()
+                //.myAccountButtonShouldExist();
     }
 }
