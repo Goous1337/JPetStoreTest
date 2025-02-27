@@ -10,7 +10,7 @@ public class MainPage {
 
     private final SelenideElement categoryDogsButton = $x("//a[contains(@href,'DOGS')]");
     private final SelenideElement categoryFishButton = $x("//a[contains(@href,'FISH')]");
-    private final SelenideElement myAccountButton = $x("//a[contains(@href,'editAccountForm')]");
+    private final SelenideElement myAccountButton = $x("///a[text()='My Account']");
     private final SelenideElement singInButton = $x("//a[contains(@href,'signonForm')]");
 
     @Step("Кликнуть на кнопку входа")
