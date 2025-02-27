@@ -19,7 +19,7 @@ public class CreateOrderTest extends BaseUiTest {
 
     @Test
     @Story("Пользователь может создать заказ")
-    @DisplayName("Создание заказ")
+    @DisplayName("Создание заказа")
     public void createOrderTest() {
 
         logger.info("Начало теста");
