@@ -28,7 +28,7 @@ public class SearchProductTest extends BaseUiTest {
         baseRouter.searchPage()
                 .clickSearchButton();
 
-        logger.info("Подтверждение нахождения продукта ");
+        logger.info("Подтверждение нахождения продукта");
         baseRouter.searchPage()
                 .successfullyFoundProductExist();
     }
