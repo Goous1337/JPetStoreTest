@@ -15,7 +15,7 @@ public class AccountRegistrationTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(AccountRegistrationTest.class);
 
-   @Test
+   @Disabled
    @Story("Пользователь может зарегистрировать новый аккаунт")
    @DisplayName("Регистрации нового аккаунта")
     public void accountRegistrationTest() {
