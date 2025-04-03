@@ -8,7 +8,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.jpetsroretest.order.CreateOrderTest;
 import ru.jpetstoretest.model.Client;
 
 @Feature("Проверка функциональности регистрации аккаунта")
@@ -16,7 +15,7 @@ public class AccountRegistrationTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(AccountRegistrationTest.class);
 
-   @Disabled
+   @Test
    @Story("Пользователь может зарегистрировать новый аккаунт")
    @DisplayName("Регистрации нового аккаунта")
     public void accountRegistrationTest() {
