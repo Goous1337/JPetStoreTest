@@ -44,7 +44,8 @@ public class MainPage {
     public MainPage myAccountButtonShouldExist(){
         myAccountButton
                 .shouldBe(Condition.exist)
-                .shouldBe(Condition.appear);
+                .shouldBe(Condition.appear)
+                .click();
         return this;
     }
 }
