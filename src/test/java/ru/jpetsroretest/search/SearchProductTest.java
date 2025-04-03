@@ -20,7 +20,7 @@ public class SearchProductTest extends BaseUiTest {
     @DisplayName("Поиска продукта")
     public void searchProductsTest(){
 
-        logger.info("Написание в поисковую строку");
+        logger.info("Ввод в поисковую строку");
         baseRouter.searchPage()
                 .sendKeysKeyWordInputField("Bulldog");
 
