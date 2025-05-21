@@ -32,7 +32,7 @@ public class BaseUiTest {
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
         Configuration.timeout = 15000;
-        Configuration.headless = false;
+        Configuration.headless = true;
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
         Configuration.browserCapabilities.setCapability("goog:chromeOptions", Map.of(
