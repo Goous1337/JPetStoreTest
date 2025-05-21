@@ -31,7 +31,7 @@ public class BaseUiTest {
         options.addArguments("--incognito");
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 15000;
         Configuration.headless = true;
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);

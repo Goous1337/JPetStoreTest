@@ -72,7 +72,7 @@ public class CreateOrderTest extends BaseUiTest {
 
 }
 
-    @Disabled
+    @Test
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
     public void updatingQuantityProductShoppingCartTest(){
@@ -109,12 +109,12 @@ public class CreateOrderTest extends BaseUiTest {
                 .sendKeysChangingNumberProductsField(expectedQuantity)
                 .clickUpdateCartButton()
                 .clickCheckoutButton();
-        //baseRouter.cardRegistrationPage()
-                //.clickContinueButton()
-                //.clickAccountInformationButton();
+        baseRouter.cardRegistrationPage()
+                .clickContinueButton()
+                .clickAccountInformationButton();
 
-        //String receivedQuantity = baseRouter.cardRegistrationPage().getQuantityValueText();
-        //Assertions.assertThat(expectedQuantity).isEqualTo(receivedQuantity);
+        String receivedQuantity = baseRouter.cardRegistrationPage().getQuantityValueText();
+        Assertions.assertThat(expectedQuantity).isEqualTo(receivedQuantity);
     }
 }
 
