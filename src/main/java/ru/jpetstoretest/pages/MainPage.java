@@ -14,7 +14,7 @@ public class MainPage {
     private final SelenideElement singInButton = $x("//a[contains(@href,'signonForm')]");
 
     @Step("Кликнуть на кнопку входа")
-    public MainPage clickSingInButton(){
+    public MainPage clickSingInButton() {
         singInButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -23,7 +23,7 @@ public class MainPage {
     }
 
     @Step("Кликнуть на кнопку 'Dogs' ")
-    public MainPage clickCategoryDogsButton(){
+    public MainPage clickCategoryDogsButton() {
         categoryDogsButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -41,7 +41,7 @@ public class MainPage {
     }
 
     @Step("Кнопка 'My account' должна существовать")
-    public MainPage myAccountButtonShouldExist(){
+    public MainPage myAccountButtonShouldExist() {
         myAccountButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear);

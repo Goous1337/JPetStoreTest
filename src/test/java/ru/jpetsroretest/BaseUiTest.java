@@ -22,17 +22,17 @@ import java.util.UUID;
 public class BaseUiTest {
 
     protected RandomHelper randomHelper = new RandomHelper();
-    public BaseRouter baseRouter  = new BaseRouter();
+    public BaseRouter baseRouter = new BaseRouter();
 
     @Step("Открытие главной страницы")
-   @BeforeEach
-    public void setupSelenideConfiguration(){
+    @BeforeEach
+    public void setupSelenideConfiguration() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
         Configuration.timeout = 15000;
-        Configuration.headless = true;
+        Configuration.headless = false;
         String authorizationPageUrl = "https://petstore.octoperf.com/actions/Catalog.action";
         Selenide.open(authorizationPageUrl);
         Configuration.browserCapabilities.setCapability("goog:chromeOptions", Map.of(
@@ -48,9 +48,9 @@ public class BaseUiTest {
     }
 
     @Step("Закрытие браузера")
-   @AfterEach
-    public void closeBrowser(){
-       Selenide.closeWebDriver();
+    @AfterEach
+    public void closeBrowser() {
+        Selenide.closeWebDriver();
     }
 
     protected Client registerNewClient() {

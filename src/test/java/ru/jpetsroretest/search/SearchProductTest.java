@@ -18,7 +18,7 @@ public class SearchProductTest extends BaseUiTest {
     @Test
     @Story("Пользователь может найти продукт")
     @DisplayName("Поиска продукта")
-    public void searchProductsTest(){
+    public void searchProductsTest() {
 
         logger.info("Ввод в поисковую строку");
         baseRouter.searchPage()

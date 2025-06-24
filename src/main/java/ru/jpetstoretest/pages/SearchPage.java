@@ -13,7 +13,7 @@ public class SearchPage {
     private final SelenideElement keyWordInputField = $x("//input[@name='keyword']");
 
     @Step("Продукт должен существовать")
-    public SearchPage successfullyFoundProductExist(){
+    public SearchPage successfullyFoundProductExist() {
         successfullyFoundOrder
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear);
@@ -21,7 +21,7 @@ public class SearchPage {
     }
 
     @Step("Кликаем на поле поиска -> вводим 'Bulldog'")
-    public SearchPage sendKeysKeyWordInputField(String nameProduct){
+    public SearchPage sendKeysKeyWordInputField(String nameProduct) {
         keyWordInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -30,7 +30,7 @@ public class SearchPage {
     }
 
     @Step("Кликаем на кнопку 'Search'")
-    public SearchPage clickSearchButton(){
+    public SearchPage clickSearchButton() {
         searchProductButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)

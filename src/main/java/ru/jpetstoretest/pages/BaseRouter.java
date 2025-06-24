@@ -8,23 +8,23 @@ public class BaseRouter {
         return page(MainPage.class);
     }
 
-    public CardRegistrationPage cardRegistrationPage(){
-        return  page(CardRegistrationPage.class);
+    public CardRegistrationPage cardRegistrationPage() {
+        return page(CardRegistrationPage.class);
     }
 
     public LoginPage loginPage() {
         return page(LoginPage.class);
     }
 
-    public RegistrationAccountPage registrationAccountPage(){
-        return  page(RegistrationAccountPage.class);
+    public RegistrationAccountPage registrationAccountPage() {
+        return page(RegistrationAccountPage.class);
     }
 
-    public DogsCategoryPage dogsCategoryPage(){
+    public DogsCategoryPage dogsCategoryPage() {
         return page(DogsCategoryPage.class);
     }
 
-    public ShoppingCartPage shoppingCartPage(){
+    public ShoppingCartPage shoppingCartPage() {
         return page(ShoppingCartPage.class);
     }
 
@@ -32,15 +32,15 @@ public class BaseRouter {
         return page(ProductListPage.class);
     }
 
-    public FishCategoryPage fishCategoryPage(){
+    public FishCategoryPage fishCategoryPage() {
         return page(FishCategoryPage.class);
     }
 
-    public SearchPage searchPage(){
+    public SearchPage searchPage() {
         return page(SearchPage.class);
     }
 
-    public ProductPage productPage(){
+    public ProductPage productPage() {
         return page(ProductPage.class);
     }
 }

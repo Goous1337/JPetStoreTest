@@ -21,7 +21,7 @@ public class RegistrationAccountPage {
     private final SelenideElement addressSecondInputField = $x("//input[contains(@name,'account.address2')]");
     private final SelenideElement cityInputField = $x("//input[contains(@name,'account.city')]");
     private final SelenideElement stateInputField = $x("//input[contains(@name,'account.state')]");
-    private final SelenideElement zipCodeInputFiled  =  $x("//input[@name='account.zip']");
+    private final SelenideElement zipCodeInputFiled = $x("//input[@name='account.zip']");
     private final SelenideElement countryInputField = $x("//input[contains(@name ,'account.country')]");
     private final SelenideElement languagePreferenceButton = $x("//select[@name='account.languagePreference']");
     private final SelenideElement favouriteCategoryButton = $x("//select[@name='account.favouriteCategoryId']");
@@ -29,15 +29,15 @@ public class RegistrationAccountPage {
     private final SelenideElement enableMyBannerCheckBox = $x("//input[@name='account.bannerOption']");
     private final SelenideElement saveAccountInformationButton = $x("//input[@name='newAccount']");
 
-    private SelenideElement languageTypeValueButton(String value){
+    private SelenideElement languageTypeValueButton(String value) {
         return $x("//select[@name='account.languagePreference']//option[@value='%s']".formatted(value));
     }
 
-    private SelenideElement favouriteTypeValueButton(String value){
+    private SelenideElement favouriteTypeValueButton(String value) {
         return $x("//select[@name='account.favouriteCategoryId']//option[@value='%s']".formatted(value));
     }
 
-    public RegistrationAccountPage  clickLanguageTypeValueButton(LanguageType languageType){
+    public RegistrationAccountPage clickLanguageTypeValueButton(LanguageType languageType) {
         languageTypeValueButton(languageType.getValue())
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -45,15 +45,16 @@ public class RegistrationAccountPage {
         return this;
     }
 
-    public RegistrationAccountPage clickFavouriteTypeValueButton(FavouriteType favouriteType){
+    public RegistrationAccountPage clickFavouriteTypeValueButton(FavouriteType favouriteType) {
         favouriteTypeValueButton(favouriteType.getValue())
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
                 .click();
         return this;
     }
+
     @Step("Кликнуть на поле 'ID' ->  вводим ID")
-    public RegistrationAccountPage sendKeysUserIDInputField(String ID){
+    public RegistrationAccountPage sendKeysUserIDInputField(String ID) {
         userIDInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -62,7 +63,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на поле 'NewPassword' -> вводим новый пароль")
-    public RegistrationAccountPage sendKeysNewPasswordInputField(String password){
+    public RegistrationAccountPage sendKeysNewPasswordInputField(String password) {
         newPasswordInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -71,7 +72,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на поле 'RepeatPassword' -> вводим пароль")
-    public RegistrationAccountPage senKeysRepeatPasswordInputField(String password){
+    public RegistrationAccountPage senKeysRepeatPasswordInputField(String password) {
         repeatPasswordInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -80,7 +81,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на поле 'First Name' -> вводим имя")
-    public RegistrationAccountPage sendKeysFirstNameInputField(String firsName){
+    public RegistrationAccountPage sendKeysFirstNameInputField(String firsName) {
         firstNameInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -89,7 +90,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на поле 'Last Name' -> вводим фамилию")
-    public RegistrationAccountPage senKeysLastNameInputField(String lastName){
+    public RegistrationAccountPage senKeysLastNameInputField(String lastName) {
         lastNameInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -98,7 +99,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на поле 'Email' -> вводим название электронной почты")
-    public RegistrationAccountPage senKeysEmailInputField(String email){
+    public RegistrationAccountPage senKeysEmailInputField(String email) {
         emailInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -170,7 +171,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на кнопку 'Language Preference' -> выбираем язык")
-    public RegistrationAccountPage clickLanguagePreferenceButton(){
+    public RegistrationAccountPage clickLanguagePreferenceButton() {
         languagePreferenceButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -179,7 +180,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на кнопку 'FavouriteCategory' -> выбираем категорию")
-    public RegistrationAccountPage clickFavouriteCategoryButton(){
+    public RegistrationAccountPage clickFavouriteCategoryButton() {
         favouriteCategoryButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -188,7 +189,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на кнопку 'EnableMyBanner'")
-    public RegistrationAccountPage  clickEnableMyBannerCheckBox(){
+    public RegistrationAccountPage clickEnableMyBannerCheckBox() {
         enableMyBannerCheckBox
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -197,7 +198,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на кнопку 'EnableMyList'")
-    public RegistrationAccountPage clickEnableMyListButton(){
+    public RegistrationAccountPage clickEnableMyListButton() {
         enableMyListCheckBox
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -206,7 +207,7 @@ public class RegistrationAccountPage {
     }
 
     @Step("Кликнуть на кнопку 'SaveAccountInformation'")
-    public RegistrationAccountPage clickSaveAccountInformationButton(){
+    public RegistrationAccountPage clickSaveAccountInformationButton() {
         saveAccountInformationButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
