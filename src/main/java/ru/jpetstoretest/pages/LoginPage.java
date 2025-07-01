@@ -30,7 +30,7 @@ public class LoginPage {
         usernameInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
-                .press(Keys.COMMAND,"A")
+                .press(Keys.COMMAND, "A")
                 .press(Keys.DELETE)
                 .sendKeys(username);
         return this;
@@ -41,12 +41,13 @@ public class LoginPage {
         passwordInputField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
-                .press(Keys.COMMAND,"A")
+                .press(Keys.COMMAND, "A")
                 .press(Keys.DELETE)
                 .sendKeys(password);
         return this;
 
     }
+
     @Step("Кликуть на кнопку 'login' ")
     public LoginPage clickLoginButton() {
         loginButton

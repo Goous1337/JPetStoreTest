@@ -12,7 +12,7 @@ public class DogsCategoryPage {
     private final SelenideElement poodleButton = $x("//a[contains(@href,'K9-PO-02')]");
 
     @Step("Кликнуть на кнопку 'K9-PD-02' ")
-    public DogsCategoryPage clickPoodleButton(){
+    public DogsCategoryPage clickPoodleButton() {
         poodleButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -21,7 +21,7 @@ public class DogsCategoryPage {
     }
 
     @Step("Кликнуть на кнопку 'K9-BF-01' ")
-    public DogsCategoryPage clickBulldogIdButton(){
+    public DogsCategoryPage clickBulldogIdButton() {
         bulldogIdButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)

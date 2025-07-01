@@ -13,10 +13,12 @@ public class LogerTest {
     public void testLoggerInfo() {
         logger.info("Сообщение уровня info");
     }
+
     @Disabled
     public void testLoggerDebug() {
         logger.debug("Сообщение уровня debug");
     }
+
     @Disabled
     public void testLoggerError() {
         logger.error("Сообщение уровня error");

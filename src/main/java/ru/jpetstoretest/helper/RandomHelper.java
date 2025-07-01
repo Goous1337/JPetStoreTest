@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RandomHelper {
 
-    public String getRandomString(int targetStringLength ) {
+    public String getRandomString(int targetStringLength) {
 
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
@@ -18,7 +18,7 @@ public class RandomHelper {
         return buffer.toString();
     }
 
-    public String getRandomEmail(int targetStringLength){
+    public String getRandomEmail(int targetStringLength) {
         return getRandomString(targetStringLength) + "@gmail.com";
     }
 

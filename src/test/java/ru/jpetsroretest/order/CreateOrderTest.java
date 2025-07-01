@@ -70,12 +70,12 @@ public class CreateOrderTest extends BaseUiTest {
 
         logger.info("Тест завершен");
 
-}
+    }
 
     @Test
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
-    public void updatingQuantityProductShoppingCartTest(){
+    public void updatingQuantityProductShoppingCartTest() {
         String expectedQuantity = "2";
         baseRouter.loginPage()
                 .clickSignInButton()

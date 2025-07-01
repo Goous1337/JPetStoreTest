@@ -15,7 +15,7 @@ public class ShoppingCartPage {
     private final SelenideElement updateCartButton = $x("//input[@name='updateCartQuantities']");
 
     @Step("Кликаем на кнопку 'Update Cart'")
-    public ShoppingCartPage clickUpdateCartButton(){
+    public ShoppingCartPage clickUpdateCartButton() {
         updateCartButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
@@ -24,18 +24,18 @@ public class ShoppingCartPage {
     }
 
     @Step("Кликаем на поле 'Quantity' -> изменяем количесвто")
-    public ShoppingCartPage sendKeysChangingNumberProductsField(String number){
+    public ShoppingCartPage sendKeysChangingNumberProductsField(String number) {
         changingNumberProductsField
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
-                .press(Keys.COMMAND,"A")
+                .press(Keys.COMMAND, "A")
                 .press(Keys.DELETE)
                 .sendKeys(number);
-        return this; 
+        return this;
     }
 
     @Step("Кликнуть на кнопку 'Proceed to Checkout' ")
-    public ShoppingCartPage clickCheckoutButton(){
+    public ShoppingCartPage clickCheckoutButton() {
         proceedCheckoutButton
                 .shouldBe(Condition.exist)
                 .shouldBe(Condition.appear)
