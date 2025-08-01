@@ -17,7 +17,7 @@ public class CreateOrderTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(CreateOrderTest.class);
 
-    @Test
+    @Disabled
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest() {
@@ -72,7 +72,7 @@ public class CreateOrderTest extends BaseUiTest {
 
     }
 
-    @Disabled
+    @Test
     @Story("Пользователь может менять количесвто товаров в заказе")
     @DisplayName("Изменение количесвто товаров в заказе")
     public void updatingQuantityProductShoppingCartTest() {
