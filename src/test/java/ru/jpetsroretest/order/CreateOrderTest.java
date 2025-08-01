@@ -59,7 +59,7 @@ public class CreateOrderTest extends BaseUiTest {
         logger.info("Заполнение данных карты");
         baseRouter.cardRegistrationPage()
                 .clickTypeDropdownButton()
-                // .clickCardTypeValueButton(cardType)
+                .clickCardTypeValueButton(cardType)
                 .sendKeysCardNumberField("1234123412341234")
                 .clickContinueButton()
                 .clickAccountInformationButton();

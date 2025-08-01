@@ -19,7 +19,7 @@ public class CardRegistrationPage {
     private final SelenideElement quantityValueText = $x("//th[contains(text(),'Quantity')]/../..//td[3]");
 
     private SelenideElement cardTypeValueButton(String value) {
-        return $x("//select[@name='order.cardType']");
+        return $x("//select[@name='order.cardType']//option[@value='%s']".formatted(value));
     }
 
     @Step("Меняем значение -> 2")
