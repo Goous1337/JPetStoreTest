@@ -15,7 +15,7 @@ public class SearchProductTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(SearchProductTest.class);
 
-    @Disabled
+    @Test
     @Story("Пользователь может найти продукт")
     @DisplayName("Поиска продукта")
     public void searchProductsTest() {
