@@ -37,6 +37,6 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .clickLoginButton();
         logger.info("Аккаунт существует (кнопка My account)");
         baseRouter.mainPage();
-                //.myAccountButtonShouldExist();
+                //.myAccountButtonShouldExist()
     }
 }
