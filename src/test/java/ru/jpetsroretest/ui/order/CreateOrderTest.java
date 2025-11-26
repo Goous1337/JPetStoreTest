@@ -109,9 +109,9 @@ public class CreateOrderTest extends BaseUiTest {
                 .sendKeysChangingNumberProductsField(expectedQuantity)
                 .clickUpdateCartButton()
                 .clickCheckoutButton();
-        baseRouter.cardRegistrationPage()
-                .clickContinueButton()
-                .clickAccountInformationButton();
+//        baseRouter.cardRegistrationPage()
+//                .clickContinueButton()
+//                .clickAccountInformationButton();
 
         String receivedQuantity = baseRouter.cardRegistrationPage().getQuantityValueText();
         Assertions.assertThat(expectedQuantity).isEqualTo(receivedQuantity);

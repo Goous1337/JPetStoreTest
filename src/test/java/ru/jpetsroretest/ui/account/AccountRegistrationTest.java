@@ -14,21 +14,21 @@ public class AccountRegistrationTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(AccountRegistrationTest.class);
 
-    @Test
-    @Story("Пользователь может зарегистрировать новый аккаунт")
-    @DisplayName("Регистрации нового аккаунта")
+   @Test
+   @Story("Пользователь может зарегистрировать новый аккаунт")
+   @DisplayName("Регистрации нового аккаунта")
     public void accountRegistrationTest() {
         // Arrange
-        logger.info("Переход на страницу логина");
+       logger.info("Переход на страницу логина");
         baseRouter.loginPage()
                 .clickSignInButton()
                 .clickRegisterNowButton();
         // Act
-        logger.info("Регистрация пользователя");
+       logger.info("Регистрация пользователя");
         Client client = registerNewClient();
 
         // Assert
-        logger.info("Вход в аккаунт");
+       logger.info("Вход в аккаунт");
         baseRouter.loginPage()
                 .clickSignInButton()
                 .sendKeysUserIDInputField(client.getUserID())
@@ -36,6 +36,6 @@ public class AccountRegistrationTest extends BaseUiTest {
                 .clickLoginButton();
         logger.info("Аккаунт существует (кнопка My account)");
         baseRouter.mainPage();
-        //.myAccountButtonShouldExist();
+                //.myAccountButtonShouldExist()
     }
 }
