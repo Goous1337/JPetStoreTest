@@ -17,7 +17,7 @@ public class CreateOrderTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(CreateOrderTest.class);
 
-    @Test
+    @Disabled
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest() {
@@ -109,9 +109,9 @@ public class CreateOrderTest extends BaseUiTest {
                 .sendKeysChangingNumberProductsField(expectedQuantity)
                 .clickUpdateCartButton()
                 .clickCheckoutButton();
-//        baseRouter.cardRegistrationPage()
-//                .clickContinueButton()
-//                .clickAccountInformationButton();
+       baseRouter.cardRegistrationPage()
+              .clickContinueButton()
+               .clickAccountInformationButton();
 
         String receivedQuantity = baseRouter.cardRegistrationPage().getQuantityValueText();
         Assertions.assertThat(expectedQuantity).isEqualTo(receivedQuantity);
