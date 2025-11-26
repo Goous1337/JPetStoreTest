@@ -1,4 +1,4 @@
-package ru.jpetsroretest.order;
+package ru.jpetsroretest.ui.order;
 
 import org.junit.jupiter.api.Disabled;
 import ru.jpetsroretest.BaseUiTest;
@@ -17,7 +17,7 @@ public class CreateOrderTest extends BaseUiTest {
 
     public static final Logger logger = LoggerFactory.getLogger(CreateOrderTest.class);
 
-    @Disabled
+    @Test
     @Story("Пользователь может создать заказ")
     @DisplayName("Создание заказа")
     public void createOrderTest() {
